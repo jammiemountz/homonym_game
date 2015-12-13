@@ -16,9 +16,9 @@ $(document).ready(function() {
     responsiveVoice.speak(word, 'US English Female');
   })
 
-  $('.burst-container').on('tap', function(){
-    responsiveVoice.speak(word, 'US English Female');
-  })
+  // $('.burst-container').on('tap', function(){
+  //   responsiveVoice.speak(word, 'US English Female');
+  // })
 
   $('#switch-mode').on('click', function(){
     if (regMode){
