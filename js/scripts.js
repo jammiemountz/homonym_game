@@ -3,18 +3,14 @@ $(document).ready(function() {
   var word;
 
   $('#submit-word').on('click', function(){
-    var submission = $('#answer').val()
-    $('#answer').val("");
-    if (checkSubmission(submission)){
-      $('#banner').addClass("right-answer");
-      $('#banner').html("WOAH - THAT'S RIGHT!");
-      time = 3000;
-    } else {
-      $('#banner').html("NOPE SORRY - IT'S THE OTHER ONE.");
-      time = 2000;
-    }
-    characterAnimation()
+    submitAnswer()
   })
+
+  $('#answer').keyup(function (e) {
+    if ($(".input1:focus") && (e.keyCode === 13)) {
+       submitAnswer()
+    }
+ });
 
   $('#burst').on('click', function(){
     responsiveVoice.speak(word);
@@ -32,7 +28,7 @@ $(document).ready(function() {
 
   function newWord () {
     word = randomizer(wordOptions)
-    console.log('answer: ', homonyms[word])
+    console.log('Ok, cheater. Answer: ', homonyms[word])
   }
 
   function checkSubmission(submission) {
@@ -56,6 +52,24 @@ $(document).ready(function() {
         $('.surprise-image').removeClass(imageClass);
       },1000)
     }, time)
+  }
+
+  function submitAnswer() {
+    var submission = $('#answer').val()
+    if (submission.length > 0) {
+      $('#answer').val("");
+      if (checkSubmission(submission)){
+        $('.correct-stars').addClass("visible");
+        $('#banner').html("WOAH - THAT'S RIGHT!");
+        time = 3000;
+      } else {
+        $('#banner').html("NOPE SORRY - IT'S THE OTHER ONE.");
+        time = 2000;
+      }
+      characterAnimation()
+    } else {
+      $('#answer').attr("placeholder", "Can't be blank!");
+    }
   }
 
   newWord()

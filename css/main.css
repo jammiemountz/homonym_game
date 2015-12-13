@@ -44,6 +44,13 @@ body {
   background-position: center;
   background-size: contain;
 }
+.correct-stars {
+  position:absolute;
+  height: 300px;
+  width: 300px;
+  right: 0;
+  visibility: hidden;
+}
 .alert-box {
   position: absolute;
   bottom: -400px;
@@ -153,7 +160,9 @@ input#answer {
   margin-top: 5px;
   width: 65%;
 }
-
+input#answer:focus {
+  outline: 0;
+}
 .rotate {
 -webkit-transform: rotate(-5deg);
 -moz-transform: rotate(-5deg);
@@ -162,4 +171,7 @@ input#answer {
 }
 .center {
   margin: 0 auto;
+}
+.visible {
+  visibility: visible;
 }
