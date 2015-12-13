@@ -50,6 +50,7 @@ $(document).ready(function() {
       $('.alert-box').removeClass("move-up");
       setTimeout(function(){
         $('.surprise-image').removeClass(imageClass);
+        $('.correct-stars').removeClass("visible");
       },1000)
     }, time)
   }
