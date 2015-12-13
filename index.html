@@ -11,7 +11,7 @@
         <!-- Place favicon.ico in the root directory -->
         <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
-        <!-- BOOTSTRAP -->
+        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
         <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
@@ -20,43 +20,51 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-<iframe src="//giphy.com/embed/8YdVbLcE6K91K" width="480" height="313" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/30-rock-tina-fey-funny-gif-8YdVbLcE6K91K">via GIPHY</a></p>
         <h1 class="title rotate">HOMONYM!</h1>
         <div class="shadow"></div>
-        <div class="col-md-2"></div>
-        <img class="col-md-3 img-responsive" src="./img/mic-01.png">
-        <div class="col-md-5">
+        <h4 class="tag-line"><strong>Play the game Homonym, <a href="https://www.youtube.com/watch?v=WZLkcFns8Ks">as seen on 30Rock!</a></strong> Frustrating and impossible for the whole family.</h4>
+        <div class="col-md-3"></div>
+        <img class="col-md-3 col-xs-6 img-responsive mic" src="./img/mic-01.png">
+        <div class="col-md-3 col-xs-6 burst-container">
           <div id="burst">
           <h4 id="hear-word" class="rotate">HEAR WORD</h4>
         </div>
         <br><br>
-        <div class="container">
-        <input
-          id="answer"
-          placeholder="Spell the word..."
-          class="col-md-3"
-          name="answer">
-        <input type="button"
-          id="submit-word"
-          name="submit"
-          class="button col-md-1"
-          value="SUBMIT">
         </div>
 
-          <h3 id="banner"></h3>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <input
+              id="answer"
+              placeholder="Spell the word..."
+              name="answer">
+            <input type="button"
+              id="submit-word"
+              name="submit"
+              class="button"
+              value="SUBMIT">
+            </div>
         </div>
 
-        <input type="button"
-          id="switch-mode"
-          class="button"
-          name="submit"
-          value="30Rock Mode">
-
-          <div class="surprise-image"></div>
+        <div class='row'>
+          <div class="col-md-4 col-md-offset-4">
+          <input type="button"
+            id="switch-mode"
+            class="button"
+            name="submit"
+            value="Play 30ROCK MODE">
+          </div>
+        </div>
+          <div class="alert-box">
+            <h3 id="banner"></h3>
+            <div class="surprise-image"></div>
+          </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+        <script src="js/data.js"></script>
+        <script src="js/helpers.js"></script>
         <script src="js/scripts.js"></script>
 
     </body>

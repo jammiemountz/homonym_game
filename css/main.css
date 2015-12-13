@@ -11,11 +11,18 @@ body {
   margin-top: 5%;
 }
 
+.tag-line {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 #hear-word {
   text-align: center;
   line-height: 200px;
   font-family: 'Sigmar One', cursive;
   color: white;
+  cursor: pointer;
 }
 
 .shadow {
@@ -31,13 +38,56 @@ body {
 }
 
 .surprise-image {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   height: 300px;
   width: 300px;
-  transition: all 2s ease;
-  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.alert-box {
+  position: absolute;
+  bottom: -400px;
+  right: 0;
+  height: 400px;
+  width: 300px;
+  transition: all 1s ease-in-out;
+}
+
+.alert-box.move-up {
+   transform: translate(20px, 10px);
+   bottom: 0px;
+}
+
+.surprise-image.liz {
+  background-image: url('../img/liz.png');
+}
+.surprise-image.tracey {
+  background-image: url('../img/tracey.png');
+}
+.surprise-image.jack {
+  background-image: url('../img/jack.png');
+}
+.surprise-image.jenna {
+  background-image: url('../img/jenna.png');
+}
+.surprise-image.kenneth {
+  background-image: url('../img/kenneth.png');
+}
+.surprise-image.frank {
+  background-image: url('../img/frank.png');
+}
+.surprise-image.hazel {
+  background-image: url('../img/hazel.png');
+}
+
+#banner {
+  height: 100px;
+  padding-top: 50px;
+  text-align: center;
+  width: 200px;
+}
+#banner.right-answer {
+  font-size: 30px;
 }
 
 .button {
@@ -47,7 +97,23 @@ body {
   border: none;
   color: white;
   height: 40px;
-  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .mic {
+    display: none;
+  }
+  .burst-container {
+    width: 100%;
+  }
+  .title {
+    font-size: 3em;
+    margin-top: 10%;
+  }
+  .alert-box {
+    background-color: white;
+    width: 100%;
+  }
 }
 
 #burst {
@@ -56,13 +122,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  width: 110%;
+  opacity: .7;
+  transition: all .5s ease;
+  margin-left: -10%;
 }
-
-#answer {
-  border: 1px solid #C6C6C6;
-  border-radius: 3px;
-  height: 30px;
-  margin-top: 10px;
+#burst:hover {
+  opacity: 1;
 }
 
 .button:hover {
@@ -72,8 +138,20 @@ body {
 .button:focus {outline:0;}
 
 .button#switch-mode {
-  width: 350px;
-  margin-left: 40%;
+  width: 100%;
+  margin-top: 10%;
+}
+.button#submit-word {
+  width: 30%;
+  float:right;
+}
+
+input#answer {
+  border: 1px solid #C6C6C6;
+  border-radius: 3px;
+  height: 30px;
+  margin-top: 5px;
+  width: 65%;
 }
 
 .rotate {
