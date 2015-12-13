@@ -17,6 +17,10 @@ body {
   margin: 0 auto;
 }
 
+.burst-container {
+  z-index: 10;
+}
+
 #hear-word {
   text-align: center;
   line-height: 200px;

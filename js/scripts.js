@@ -12,13 +12,12 @@ $(document).ready(function() {
     }
  });
 
-  $('#burst').on('click', function(){
-    responsiveVoice.speak(word, "US English Female");
+  $('.burst-container').on('click', function(){
+    responsiveVoice.speak(word, 'US English Female');
   })
 
-  $('#burst').on('tap', function(){
-    console.log('tapped')
-    responsiveVoice.speak(word, "US English Female");
+  $('.burst-container').on('tap', function(){
+    responsiveVoice.speak(word, 'US English Female');
   })
 
   $('#switch-mode').on('click', function(){
